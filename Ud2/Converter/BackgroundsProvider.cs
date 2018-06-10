@@ -16,7 +16,6 @@ namespace DesignTimeBackground.Converter
         {
             SolidColorBrush brush = new SolidColorBrush(Colors.Maroon);
             return brush;
-            //return null;
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, string language)

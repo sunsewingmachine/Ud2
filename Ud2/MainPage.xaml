@@ -7,7 +7,21 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Page.Resources>
+    </Page.Resources>
 
+    <Grid Background="White">
+        <StackPanel>
+            <Grid x:Name="LockerGrid1" 
+              Background="{Binding LockerGrid1.Tag, Converter={StaticResource BgLocker}, FallbackValue=Gray}" Height="300">
+            </Grid>
+            <Grid x:Name="LockerGrid2" 
+              Background="{x:Bind LockerGrid2.Tag, Converter={StaticResource BgLocker}, FallbackValue=Green}" Height="300">
+            </Grid>
+            <Grid x:Name="LockerGrid3" 
+              Background="{Binding LockerGrid3.Tag, Converter={StaticResource BgLocker}, FallbackValue=Gold}" Height="300">
+            </Grid>
+
+        </StackPanel>
     </Grid>
 </Page>
